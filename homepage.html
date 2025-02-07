@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Blog - Homepage</title>
+    <link rel="stylesheet" href="homepage.css">
+</head>
+<body>
+    <h1>Welcome to My Travel Blog</h1>
+    <div class="number-blocks">
+        <div class="number-block" id="block1" onclick="showList(1)">1</div>
+        <div class="number-block" id="block2" onclick="showList(2)">2</div>
+        <div class="number-block" id="block3" onclick="showList(3)">3</div>
+        <div class="number-block" id="block4" onclick="showList(4)">4</div>
+    </div>
+
+    <div id="list-container">
+        <!-- Lists will be dynamically inserted here -->
+    </div>
+
+    <script>
+        function showList(blockId) {
+            const listContainer = document.getElementById("list-container");
+            listContainer.innerHTML = ""; // Clear previous content
+
+            let listContent = "";
+            switch (blockId) {
+                case 1:
+                    listContent = `
+                        <h2>Europe</h2>
+                        <ol>
+                            <li>France
+                                <ul>
+                                    <li>Paris</li>
+                                    <li>Nice</li>
+                                    <li>Lyon</li>
+                                </ul>
+                            </li>
+                            <li>Italy
+                                <ul>
+                                    <li>Rome</li>
+                                    <li>Venice</li>
+                                    <li>Florence</li>
+                                </ul>
+                            </li>
+                            <li>Greece
+                                <ul>
+                                    <li>Athens</li>
+                                    <li>Santorini</li>
+                                    <li>Mykonos</li>
+                                </ul>
+                            </li>
+                        </ol>`;
+                    break;
+                case 2:
+                    listContent = `
+                        <h2>Asia</h2>
+                        <ol>
+                            <li>Japan
+                                <ul>
+                                    <li>Tokyo</li>
+                                    <li>Kyoto</li>
+                                    <li>Osaka</li>
+                                </ul>
+                            </li>
+                            <li>China
+                                <ul>
+                                    <li>Beijing</li>
+                                    <li>Shanghai</li>
+                                    <li>Xi'an</li>
+                                </ul>
+                            </li>
+                            <li>India
+                                <ul>
+                                    <li>New Delhi</li>
+                                    <li>Mumbai</li>
+                                    <li>Jaipur</li>
+                                </ul>
+                            </li>
+                        </ol>`;
+                    break;
+                case 3:
+                    listContent = `
+                        <h2>America</h2>
+                        <ol>
+                            <li>USA
+                                <ul>
+                                    <li>New York City</li>
+                                    <li>Los Angeles</li>
+                                    <li>Chicago</li>
+                                </ul>
+                            </li>
+                            <li>Brazil
+                                <ul>
+                                    <li>Rio de Janeiro</li>
+                                    <li>São Paulo</li>
+                                    <li>Salvador</li>
+                                </ul>
+                            </li>
+                            <li>Canada
+                                <ul>
+                                    <li>Toronto</li>
+                                    <li>Vancouver</li>
+                                    <li>Montreal</li>
+                                </ul>
+                            </li>
+                        </ol>`;
+                    break;
+                case 4:
+                    listContent = `
+                        <h2>Africa</h2>
+                        <ol>
+                            <li>South Africa
+                                <ul>
+                                    <li>Cape Town</li>
+                                    <li>Johannesburg</li>
+                                    <li>Durban</li>
+                                </ul>
+                            </li>
+                            <li>Egypt
+                                <ul>
+                                    <li>Cairo</li>
+                                    <li>Luxor</li>
+                                    <li>Sharm El Sheikh</li>
+                                </ul>
+                            </li>
+                            <li>Morocco
+                                <ul>
+                                    <li>Marrakech</li>
+                                    <li>Casablanca</li>
+                                    <li>Fez</li>
+                                </ul>
+                            </li>
+                        </ol>`;
+                    break;
+            }
+            listContainer.innerHTML = listContent;
+        }
+    </script>
+</body>
+</html>
